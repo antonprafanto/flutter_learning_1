@@ -14,19 +14,27 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Hallo World"),
         ),
-        body: Center(
-          child: Text("Hallo World Hallo World Hallo World",
-              maxLines: 2,
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 30,
-                //decoration: TextDecoration.underline,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.bold,
-                //letterSpacing: 10,
-                //wordSpacing: 1,
-                overflow: TextOverflow.ellipsis,
-              )),
+        body: Container(
+          alignment: Alignment.center,
+          margin: EdgeInsets.all(20),
+          //margin: EdgeInsets.only()
+          //margin: EdgeInsets.symmetric(horizontal: 30),
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            //shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(20),
+            gradient: LinearGradient(
+              colors: [Colors.red, Colors.blue, Colors.green],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topLeft,
+            ),
+          ),
+          //padding: EdgeInsets.all(5),
+          height: 100,
+          width: 100,
+          child: Text(
+            "Hallo World",
+          ),
         ),
       ),
     );
