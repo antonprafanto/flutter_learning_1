@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           title: Text("Hallo World"),
         ),
         body: Center(
-          child: Text("Hallo World Hallo World Hallo World Hallo World Hallo World Hallo World Hallo World Hallo World Hallo World ",
+          child: Text("Hallo World Hallo World Hallo World",
               maxLines: 2,
               style: TextStyle(
                 color: Colors.blue,
