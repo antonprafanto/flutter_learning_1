@@ -18,30 +18,16 @@ class MyApp extends StatelessWidget {
           padding: EdgeInsets.all(20),
           width: double.infinity,
           height: 200,
-          child: ListView(
-            //scrollDirection: Axis.horizontal,
-            //scrollDirection: Axis.vertical,
-            children: [
-              Container(
-                margin: EdgeInsets.only(bottom: 20),
-                color: Colors.blue,
-                child: Text("Item"),
-                padding: EdgeInsets.all(10),
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 20),
-                color: Colors.blue,
-                child: Text("Item"),
-                padding: EdgeInsets.all(10),
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 20),
-                color: Colors.blue,
-                child: Text("Item"),
-                padding: EdgeInsets.all(10),
-              ),
-            ],
-          ),
+          child: ListView.builder(
+            itemCount: 5,
+            itemBuilder: (context, i) {
+            return Container(
+              margin: EdgeInsets.only(bottom: 20),
+              color: Colors.blue,
+              child: Text("Item"),
+              padding: EdgeInsets.all(10),
+            );
+          }),
         ),
       ),
     );
