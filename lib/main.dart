@@ -15,25 +15,27 @@ class MyApp extends StatelessWidget {
           title: Text("Hallo World"),
         ),
         body: Container(
-          alignment: Alignment.center,
-          margin: EdgeInsets.all(20),
-          //margin: EdgeInsets.only()
-          //margin: EdgeInsets.symmetric(horizontal: 30),
-          decoration: BoxDecoration(
-            color: Colors.blue,
-            //shape: BoxShape.circle,
-            borderRadius: BorderRadius.circular(20),
-            gradient: LinearGradient(
-              colors: [Colors.red, Colors.blue, Colors.green],
-              begin: Alignment.bottomCenter,
-              end: Alignment.topLeft,
-            ),
-          ),
-          //padding: EdgeInsets.all(5),
-          height: 100,
-          width: 100,
-          child: Text(
-            "Hallo World",
+          //width: double.infinity,
+          height: double.infinity,
+          color: Colors.red,
+          child: Row(
+            //mainAxisAlignment: MainAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                height: 50,
+                width: 50,
+                color: Colors.blueAccent,
+              ),
+              Container(
+                height: 50,
+                width: 50,
+                color: Colors.blueAccent,
+              ),
+            ],
           ),
         ),
       ),
