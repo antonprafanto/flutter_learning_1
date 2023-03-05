@@ -1,35 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning_1/page_dua.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hallo World"),
-        ),
-        body: Container(
-          padding: EdgeInsets.all(20),
-          width: double.infinity,
-          height: 200,
-          child: ListView.builder(
-            itemCount: 5,
-            itemBuilder: (context, i) {
-            return Container(
-              margin: EdgeInsets.only(bottom: 20),
-              color: Colors.blue,
-              child: Text("Item"),
-              padding: EdgeInsets.all(10),
-            );
-          }),
-        ),
-      ),
+      home: PageSatu(),
     );
+  }
+}
+
+class PageSatu extends StatelessWidget {
+  const PageSatu({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Page 1"),
+        ),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PageDua()),
+              );
+            },
+            child: Text("Pindah Ke Halaman 2"),
+          ),
+        ));
   }
 }
